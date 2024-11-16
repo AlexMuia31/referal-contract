@@ -69,7 +69,7 @@ contract Referral is ReentrancyGuard {
             "Referrer has already referred 9 people"
         );
         //require that the referrer is less than 10 levels
-        require(users[_referrer].level < 10, "Referrer is already at level 10");
+        require(users[_referrer].level < 10, "Referrer is already at level 10 here");
         _;
     }
 
