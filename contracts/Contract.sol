@@ -46,7 +46,7 @@ contract Referral is ReentrancyGuard {
         );
         require(
             users[msg.sender].referrer == address(0),
-            "User already registered"
+            "User already registered here"
         );
         require(
             _referrer != address(0) && _referrer != msg.sender,
