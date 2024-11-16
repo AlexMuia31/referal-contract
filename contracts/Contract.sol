@@ -113,7 +113,7 @@ contract Referral is ReentrancyGuard {
         users[_referrer].totalReferrals++;
         users[_referrer].referredAddresses.push(msg.sender); // Add the referred address to the referrer's list
 
-         // Update second-level referrals for the referrer's referrer
+         // Update second-level referrals for the referrer's referrer in the app
         if (users[_referrer].referrer != address(0)) {
             address referrerOfReferrer = users[_referrer].referrer;
             users[referrerOfReferrer].secondLevelReferrals.push(msg.sender);
